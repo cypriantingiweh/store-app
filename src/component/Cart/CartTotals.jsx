@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
+import MyApp from './PaypalButton';
 
 export default class CartTotals extends Component {
   render() {
@@ -28,6 +29,7 @@ export default class CartTotals extends Component {
                                   Total: <strong>${cartTotal}</strong>
                                 </span>
                             </h5>
+                            <MyApp cartTotal={cartTotal} clearCart={clearCart}  history={this.props.history}/> 
                     </div>
                 </div>
             </div>
